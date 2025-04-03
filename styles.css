@@ -1,0 +1,297 @@
+/* Univeral Styles */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-areas: "navbar navbar" "aside main";
+    background: linear-gradient(to right, #135a64, transparent), url("./images/tokyo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 175vh;
+    /* background-position: center; */
+}
+
+/* Navigation Bar Styles */
+.navbar{
+    top:0;
+    position: sticky;
+    z-index: 10;
+    grid-area: navbar;
+    background-color: #1b2828;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    opacity: 90%;
+}
+
+.navbar h1{
+    font-style: italic;
+    margin: 0;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+/* Search Bar styles */
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-bar input{
+    width: 200px;
+    border: none;
+}
+
+.search-bar i{
+    color: #01696b;
+}
+
+.search-bar button{
+    background-color: #01696b;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-bar button:hover{
+    cursor: pointer;
+    opacity: 90%;
+}
+
+/* Aside styles */
+.aside{
+    grid-area: aside;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.aside a{
+    color: white;
+    font-size: 25px;
+}
+
+.solid-line {
+    border-left: 2px solid white;
+    height: 200px;
+}
+
+/* Homepage styles */
+.home{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.home h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 48px;
+    width: 12ch;
+}
+
+.home p{
+    color: white;
+    font-weight: 300;
+    width: 40ch;
+}
+
+.home button{
+    background-color: #01696b;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.home button:hover{
+    cursor: pointer;
+    opacity: 90%;
+}
+
+/* about page styles */
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.about > h1{
+    font-size: 64px;
+    color: white;
+}
+
+.about > p{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* team section styles */
+.team{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: end;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team > h2{
+    color: white;
+    font-size: 48px;
+    width: 5ch;
+    text-align: end;
+    margin: 0;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card img{
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.card button{
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* contact page styles */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "contact-context contact-form";
+    padding: 80px 40px;
+}
+
+.contact-context{
+    grid-area: contact-context;
+}
+.contact-context h1{
+    color: white;
+    font-size: 64px;
+    width: 8ch;
+}
+.contact-context p{
+    color: white;
+    opacity: 75%;
+    font-size: 20px;
+}
+
+.contact-form{
+    grid-area: contact-form;
+    background-color: rgba(255,255,255,0.5);
+    display: grid;
+    grid-template-columns: start;
+    justify-content: stretch;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+}
+.contact-form input{
+    opacity: 0.6;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.contact-form textarea{
+    align-self: start;
+    border-radius: 10px;
+    opacity: 0.6;
+
+}
+.contact-form button {
+    background: #01696b;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* search results styles */
+.hide {
+    display: none;
+}
+
+.show{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin: 10px 0;
+}
+
+.dest-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 7px rgba(255,255,255,0.3);
+    width: 60%;
+}
+
+.dest-card small{
+    margin: 10px;
+}
+
+.dest-card main{
+    padding: 10px;
+}
+
+.dest-card h3{
+    margin-top: 0;
+    color: black;
+}
+
+.dest-card p{
+    color: black;
+    width: 100%;
+}
+
+.dest-card button{
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.dest-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
