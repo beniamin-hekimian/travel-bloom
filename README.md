@@ -21,7 +21,7 @@ A travel recommendation website created for the **IBM** Skills Network Course: *
 
 ## Mockup 📸
 
-![Home Page](./images/home_page.png)
+![Home Page](./images/mockup.png)
 
 ## What I Learned 📚
 
